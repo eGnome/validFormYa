@@ -97,8 +97,8 @@ window.MyForm = {
     let sum = 0,
         tel = phone.replace(/\W/g, "");
 
-    for (let i = 0; i < tel.length; i++) {
-      sum += parseInt(tel[i]);
+    for (let number of tel) {
+      sum += parseInt(number);
     }
 
     return sum;

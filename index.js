@@ -17,7 +17,7 @@ window.MyForm = {
     }
   },
   setData (object) {
-    if (typeof object !== "object" || object === null) return;
+    if (!object) return;
 
     this.elements["fio"].value = object.fio || "";
     this.elements["email"].value = object.email || "";

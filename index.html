@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Yandex School</title>
+    <style>
+      input { border: 1px solid #ccc; }
+      input:focus { outline: none; }
+      input.error, div.error { border: 1px solid red; }
+      p.error { color: red; }
+      button[disabled] { cursor: not-allowed; }
+      div.success {border: 1px solid green; }
+    </style>
+  </head>
+  <body>
+
+    <form action="response/success.json" method="post" id="myForm">
+
+      <label> ФИО:
+        <input type="text" name="fio" required placeholder="Иванов Иван Иванович"
+               title="Поле ФИО обязательно">
+      </label>
+
+      <label> Email:
+        <input type="email" name="email" required placeholder="email@yandex.ru"
+               title="Поле Email обязательно">
+      </label>
+
+      <label> Телефон:
+        <input type="tel" name="phone" placeholder="+7(999)999-99-99"
+               title="Поле Телефон обязательно">
+      </label>
+
+      <button id="submitButton">Отправить</button>
+
+    </form>
+
+    <div id="resultContainer"></div>
+
+  </body>
+  <script src="plugins/axios.js"></script>
+  <script src="index.js"></script>
+</html>
